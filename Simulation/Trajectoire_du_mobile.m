@@ -3,8 +3,8 @@ close
 clc
 
 % Paramètres
-omega_ext = 25.62; % Vitesse de rotation de la roue extérieure (en rad/s)
-omega_int = 11.02;  % Vitesse de rotation de la roue intérieure (en rad/s)
+omega_ext = 18; % Vitesse de rotation de la roue extérieure (en rad/s)
+omega_int = -18;  % Vitesse de rotation de la roue intérieure (en rad/s)
 L = 0.5;        % Largeur du véhicule (en m)
 r = 0.065/2;        % Rayon de la roue (en m)
 dt = 0.001;      % Pas de temps (en s)
@@ -28,7 +28,7 @@ for i = 2:length(t)
     % Mise à jour de l'angle de virage
     theta = theta + C * dt;
     temps = temps + dt;
-        if theta >= 45/180*pi
+        if theta >= 180/180*pi
             disp(['Temps (s): ',num2str(temps)]);
             disp(['Theta (deg) : ',num2str(theta/pi*180)])
         end 

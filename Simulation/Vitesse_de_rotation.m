@@ -7,7 +7,7 @@ r = 0.065/2;
 PWM = 0:15:255;
 
 U = 12; % Tension en V
-I = 0.16; % Intensité en A
+I = 0.19; % Intensité en A
 P_max = I*U; % Puissance en W
 C = 0.0784532; % Couple en Nm
 R = 1/48; % Gear ratio
@@ -29,7 +29,7 @@ P = PWM*P_max/255;  % puisssance selon la valeur du PWM
 w = P/C;    % vitesse de rotation
 
 figure
-plot(w,P/I)
+plot(w,PWM)
 title("Tension d'entrée en fonction de la vitesse de rotation")
 xlabel('Vitesse de rotation (en rad/s)')
 ylabel('Tension (en V)')
